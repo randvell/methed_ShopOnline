@@ -1,13 +1,9 @@
 .header {
-  padding-top: 34px;
-  margin-bottom: 90px;
-}
-
-.container--header {
-  display: grid;
   align-items: center;
   grid-template-columns: repeat(12, 1fr);
   justify-content: space-between;
+  padding-top: 34px;
+  margin-bottom: 90px;
 }
 
 .logo {

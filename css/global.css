@@ -23,7 +23,6 @@ body {
   -webkit-tap-highlight-color: transparent;
   font-size: 16px;
   font-weight: 400;
-  text-align: center;
 
   color: #fff;
   background-color: #fff;
@@ -88,9 +87,9 @@ iframe {
 
 .container {
   display: grid;
-  margin: 0 auto;
   max-width: 1770px;
-}
+  }
+  
 
 @media (max-width: 1024px) {
   .section {
