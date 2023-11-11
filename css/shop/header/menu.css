@@ -1,0 +1,31 @@
+.menu {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+
+  width: 151px;
+  height: 54px;
+  border-radius: 10px;
+  background: #3670C7;
+}
+
+.menu__label {
+  color: #FFF;
+  font-family: "Lato Regular";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  padding-top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    grid-area: menu;
+  }
+}
