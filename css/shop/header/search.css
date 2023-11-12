@@ -48,9 +48,10 @@
   background: #3670C7;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1560px) {
   .search {
     grid-area: search;
     justify-self: end;
+    max-width: 100%;
   }
 }

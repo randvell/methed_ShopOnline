@@ -88,7 +88,8 @@ iframe {
 .container {
   display: grid;
   max-width: 1770px;
-  }
+  margin: 0 auto;
+}
   
 
 @media (max-width: 1024px) {

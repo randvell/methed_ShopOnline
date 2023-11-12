@@ -1,5 +1,5 @@
 .nav {
-  grid-column: 10 / 13;
+  grid-column: 11 / 13;
   grid-row: 1 / 2;
   justify-self: end;
   display: grid;
@@ -63,7 +63,7 @@
   color: #3670C7;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1560px) {
   .nav {
     grid-area: nav;
   }
