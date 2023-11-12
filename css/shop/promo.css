@@ -1,3 +1,7 @@
+.promo {
+  padding-bottom: 32px;
+}
+
 .promo__items {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
@@ -7,6 +11,8 @@
 
 .promo__item {
   display: grid;
+  align-items: end;
+
   font-family: "Lato Bold";
   font-size: 30px;
   font-weight: 700;
@@ -29,13 +35,14 @@
 }
 
 .promo__span--book {
-  font-family: "Lato Bold";
+  font-family: "Lato Regular";
   font-size: 40px;
   font-weight: 700;
   line-height: 130%;
 }
 
 .promo__span--sneakers {
+  display: block;
   font-family: "Lato Bold";
   font-size: 56px;
   font-weight: 700;
@@ -71,10 +78,17 @@
 
 .promo__item--book {
   background-image: url("/images/book.jpg");
+  font-family: "Lato Regular";
+  font-size: 30px;
+  line-height: 130%;
+  font-weight: 400;
 }
 
 .promo__item--clock {
+  grid-template-rows: repeat(2, con);
   background-image: url("/images/clock.jpg");
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .promo__item--sneakers {
@@ -95,6 +109,7 @@
 }
 
 .promo__item--laptop {
+  grid-template-columns: auto 1fr;
   grid-column: 5 / 7;
   background-image: url("/images/laptop.jpg");
 }
@@ -103,6 +118,7 @@
   grid-column: 1 / 5;
   grid-row: 3 / 5;
   background-image: url("/images/2022.jpg");
+  padding: 50px;
 }
 
 .promo__item--dress {
@@ -117,9 +133,44 @@
 
 .promo__item--balls {
   transform: scaleX(-1);
-  background-position: left;
+  background-position: 0;
   background-image: url("/images/balls.jpg");
 }
+
+.promo__ellipse {
+  display: inline-grid;
+  place-content: center center;
+  width: 88px;
+  height: 88px;
+  border-radius: 100%;
+  background-color: #FFBD13;
+}
+
+.promo__ellipse--clock {
+  place-self: end end;
+  margin-right: 6px;
+}
+
+.promo__ellipse--sneaker {
+  place-self: start start;
+}
+
+.promo__ellipse--laptop {
+  place-self: end end;
+}
+
+.promo__text--laptop {
+  margin-bottom: 10px;
+}
+
+.promo__ellipse--dress {
+  place-self: end end;;
+}
+
+.promo__ellipse--cleaning {
+  place-self: start start;
+}
+
 
 @media (max-width: 1560px) {
   

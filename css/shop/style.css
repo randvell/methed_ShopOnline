@@ -2,5 +2,8 @@
 @import url('../global.css');
 @import url('../fonts.css');
 @import url('header.css');
+@import url('menu.css');
+@import url('navigation.css');
+@import url('search.css');
 @import url('banner.css');
 @import url('promo.css');

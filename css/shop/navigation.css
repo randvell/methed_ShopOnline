@@ -6,7 +6,8 @@
 }
 
 .nav__list {
-  display: inline-flex;
+  display: grid;
+  grid-auto-flow: column;
   align-items: end;
   gap: 40px;
 }
