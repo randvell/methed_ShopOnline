@@ -74,3 +74,21 @@
     height: 30px;
   }
 }
+
+@media (max-width: 600px) {
+  .nav__list {
+    gap: 20px;
+  }
+
+  .nav__link-label {
+    display: none;
+  }
+
+  .nav__icon--cart {
+    padding: 2.5px 3px;
+  }
+
+  .nav__icon--profile, .nav__icon--favourite {
+    margin-bottom: 0;
+  }
+}

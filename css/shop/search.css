@@ -24,7 +24,6 @@
   padding: 15px 0 18px 40px;
 }
 
-
 .search__input::placeholder {
   color: #8F8F8F;
   font-family: "Lato Bold";
@@ -54,8 +53,29 @@
 }
 
 @media (max-width: 768px) {
+  .search {
+    height: unset;
+  }
+
   .search__input::placeholder {
     font-size: 12px;
     line-height: 130%;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .search__input {
+    height: 30px;
+  }
+
+  .search__submit {
+    width: 50px;
+    height: 30px;
+  }
+
+  .search__icon {
+    width: 20px;
+    height: 20px;
   }
 }

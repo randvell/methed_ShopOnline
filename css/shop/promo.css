@@ -200,6 +200,7 @@
   .promo__item {
     font-size: 24px;
     line-height: 130%;
+    border-radius: 16px;
   }
 
   .promo__item--sneakers {
@@ -254,6 +255,7 @@
     font-size: 16px;
     line-height: 130%;
     padding: 10px;
+    border-radius: 8px;
   }
 
   .promo__item--sneakers {
@@ -305,5 +307,57 @@
 
   .promo__block--sneakers {
     padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .promo__items {
+    grid-template-columns: repeat(2, minmax(110px, 220px));
+    grid-template-rows: repeat(9, 130px);
+    grid-template-areas:
+    "book clock"
+    "sneaker sneaker"
+    "sneakers sneakers"
+    "sneakers sneakers"
+    "gifts gifts"
+    "laptop laptop"
+    "dress cleaning"
+    "dress balls"
+    "newyear newyear"
+    ;
+  }
+
+  .promo__text--book {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo__item {
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+
+  .promo__span--sneakers {
+    font-size: 16px;
+    line-height: 110%;
+  }
+
+  .promo__block--new-year {
+    border-radius: 8px;
+    place-self: end center;
+    font-size: 12px;
+    line-height: 120%;
+    padding: 8px 41px;
+  }
+
+  .promo__item--dress {
+    background-position: top;
+  }
+
+  .promo__item--cleaning {
+    font-size: 16px;
+    line-height: 110%;
   }
 }

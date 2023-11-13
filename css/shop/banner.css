@@ -72,6 +72,10 @@
 }
 
 @media (max-width: 1200px) {
+  .banner {
+    margin-bottom: 22px;
+  }
+
   .container--banner {
     grid-template-rows: repeat(4, 78.5px);
   }
@@ -97,6 +101,14 @@
 }
 
 @media (max-width: 768px) {
+  .banner {
+    margin-bottom: 40px;
+  }
+
+  .container--banner {
+    border-radius: 8px;
+  }
+
   .banner__header {
     grid-column: 2 / 8;
     font-size: 30px;
@@ -108,6 +120,10 @@
     line-height: 130%;
   }
 
+  .timer__items {
+    gap: 10px;
+  }
+
   .timer__item {
     font-size: 16px;
     line-height: 130%;
@@ -116,5 +132,57 @@
   .timer__value {
     font-size: 30px;
     line-height: 130%;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    margin-bottom: 20px;
+  }
+
+  .banner__image {
+    height: 340px;
+  }
+
+  .banner__header {
+    place-self: start center;
+    grid-column: 2 / 12;
+    font-size: 30px;
+    line-height: 130%;
+  }
+
+  @media (max-width: 480px) {
+    .container--banner {
+      grid-template-rows: repeat(5, 68px);
+    }
+
+    .banner__header {
+      font-size: 22px;
+      line-height: 130%;
+    }
+
+    .banner__timer {
+      grid-row: 5 / 6;
+    }
+
+    .timer__header {
+      grid-row: 4 / 5;
+      font-size: 8px;
+      line-height: 130%;
+    }
+
+    .timer__items {
+      gap: 8px;
+    }
+
+    .timer__item {
+      font-size: 12px;
+      line-height: 130%;
+    }
+  
+    .timer__value {
+      font-size: 20px;
+      line-height: 130%;
+    }
   }
 }

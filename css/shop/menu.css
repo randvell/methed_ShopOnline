@@ -35,3 +35,27 @@
     line-height: 150%;
   }
 }
+
+@media (max-width: 768px) {
+  .menu {
+    height: 40px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    height: 30px;
+    width: 79px;
+  }
+
+  .menu__label {
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  .menu__icon {
+    width: 14px;
+    height: 14px;
+  }
+}
