@@ -4,8 +4,15 @@
 
 .promo__items {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(6, 1fr);
+  justify-content: space-evenly;
+  grid-template-rows: repeat(4, minmax(200px, 245px));
+  grid-template-columns: repeat(6, minmax(150px, 245px));
+  grid-template-areas:
+    "book clock sneakers sneakers gifts gifts"
+    "sneaker sneaker sneakers sneakers laptop laptop"
+    "newyear newyear newyear newyear dress cleaning"
+    "newyear newyear newyear newyear dress balls"
+  ;
   gap: 60px;
 }
 
@@ -28,10 +35,20 @@
 }
 
 .promo__item--sneakers {
+  grid-area: sneakers;
+  background-image: url("../../images/sneakers.jpg");
   font-family: "Lato Regular";
   font-size: 40px;
   font-weight: 400;
   line-height: 120%;
+}
+
+.promo__span {
+  display: block;
+}
+
+.promo__text--book {
+  max-width: 190px;
 }
 
 .promo__span--book {
@@ -77,58 +94,53 @@
 }
 
 .promo__item--book {
+  grid-area: book;
   background-image: url("../../images/book.jpg");
   font-family: "Lato Regular";
-  font-size: 30px;
-  line-height: 130%;
   font-weight: 400;
 }
 
 .promo__item--clock {
+  grid-area: clock;
   background-image: url("../../images/clock.jpg");
   padding-left: 14px;
   padding-right: 14px;
 }
 
-.promo__item--sneakers {
-  grid-column: span 2;
-  grid-row: span 2;
-  background-image: url("../../images/sneakers.jpg");
-}
-
 .promo__item--gifts {
-  grid-column: span 2;
+  grid-area: gifts;
   background-image: url("../../images/gift.jpg");
 }
 
 .promo__item--sneaker {
-  grid-column: span 2;
+  grid-area: sneaker;
   background-image: url("../../images/sneaker.jpg");
 }
 
 .promo__item--laptop {
+  grid-area: laptop;
   grid-template-columns: auto 1fr;
-  grid-column: span 2;
   background-image: url("../../images/laptop.jpg");
 }
 
 .promo__item--new-year {
-  grid-column: span 4;
-  grid-row: span 2;
+  grid-area: newyear;
   background-image: url("../../images/2022.jpg");
   padding: 50px;
 }
 
 .promo__item--dress {
-  grid-row: span 2;
+  grid-area: dress;
   background-image: url("../../images/dress.jpg");
 }
 
 .promo__item--cleaning {
+  grid-area: cleaning;
   background-image: url("../../images/cleaning.jpg");
 }
 
 .promo__item--balls {
+  grid-area: balls;
   transform: scaleX(-1);
   background-position: 0;
   background-image: url("../../images/balls.jpg");
@@ -161,14 +173,137 @@
 }
 
 .promo__ellipse--dress {
-  place-self: end end;;
+  place-self: end end;
 }
 
 .promo__ellipse--cleaning {
   place-self: start start;
 }
 
+@media (max-width: 1600px) {
+  .promo__items {
+    grid-template-rows: repeat(6, minmax(140px, 250px));
+    grid-template-columns: repeat(4, minmax(140px, 250px));
+    grid-template-areas:
+      "book clock sneakers sneakers"
+      "sneaker sneaker sneakers sneakers"
+      "gifts gifts dress cleaning"
+      "laptop laptop dress balls"
+      "newyear newyear newyear newyear"
+      "newyear newyear newyear newyear"
+    ;
+    gap: 24px;
+  }
+}
 
-@media (max-width: 1560px) {
-  
+@media (max-width: 1200px) {
+  .promo__item {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .promo__item--sneakers {
+    font-size: 30px;
+    line-height: 120%;
+  }
+
+  .promo__span--book {
+    font-size: 30px;
+    line-height: 130%;
+  }
+
+  .promo__span--sneakers {
+    font-size: 40px;
+    line-height: 120%;
+  }
+
+  .promo__block--new-year {
+    font-size: 30px;
+    line-height: 120%;
+  }
+
+  .promo__item--cleaning {
+    font-size: 20px;
+    line-height: 130%;
+    padding-left: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo__items {
+    grid-template-columns: repeat(9, minmax(40px, 70px));
+    grid-template-rows: repeat(11, minmax(40px, 60px));
+    grid-template-areas:
+    "book book clock clock sneakers sneakers sneakers sneakers sneakers"
+    "book book clock clock sneakers sneakers sneakers sneakers sneakers"
+    "sneaker sneaker sneaker sneaker sneakers sneakers sneakers sneakers sneakers"
+    "sneaker sneaker sneaker sneaker sneakers sneakers sneakers sneakers sneakers"
+    "gifts gifts gifts gifts sneakers sneakers sneakers sneakers sneakers"
+    "gifts gifts gifts gifts dress dress dress cleaning cleaning"
+    "laptop laptop laptop laptop dress dress dress cleaning cleaning"
+    "laptop laptop laptop laptop dress dress dress balls balls"
+    "newyear newyear newyear newyear newyear newyear newyear newyear newyear"
+    "newyear newyear newyear newyear newyear newyear newyear newyear newyear"
+    "newyear newyear newyear newyear newyear newyear newyear newyear newyear"
+    "newyear newyear newyear newyear newyear newyear newyear newyear newyear"
+    ;
+    gap: 20px;
+  }
+
+  .promo__item {
+    font-size: 16px;
+    line-height: 130%;
+    padding: 10px;
+  }
+
+  .promo__item--sneakers {
+    font-size: 16px;
+    line-height: 110%;
+  }
+
+  .promo__span--sneakers {
+    display: inline;
+    font-size: 26px;
+    line-height: 110%;
+  }
+
+  .promo__span--book {
+    display: inline;
+    font-size: 20px;
+    line-height: 110%;
+  }
+
+  .promo__block--new-year {
+    font-size: 20px;
+    line-height: 120%;
+    padding: 22px 33px;
+    height: unset;
+  }
+
+  .promo__item--dress {
+    background-position: top;
+  }
+
+  .promo__item--cleaning {
+    font-size: 16px;
+    line-height: 110%;
+  }
+
+  .promo__block--sneakers {
+    border-radius: 12px;
+    min-height: 60px;
+  }
+
+  .promo__ellipse {
+    display: inline-grid;
+    place-content: center center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #FFBD13;
+  }
+
+  .promo__block--sneakers {
+    padding: 10px;
+  }
 }

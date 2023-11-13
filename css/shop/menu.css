@@ -28,3 +28,10 @@
     justify-self: unset;
   }
 }
+
+@media (max-width: 768px) {
+  .menu__label {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

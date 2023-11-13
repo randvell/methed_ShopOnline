@@ -49,6 +49,13 @@
 @media (max-width: 1600px) {
   .search {
     justify-self: end;
-    max-width: 100%;
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search__input::placeholder {
+    font-size: 12px;
+    line-height: 130%;
   }
 }

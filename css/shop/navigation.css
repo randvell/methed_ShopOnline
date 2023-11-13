@@ -62,3 +62,15 @@
   line-height: normal;
   color: #3670C7;
 }
+
+@media (max-width: 768px) {
+  .nav__icon {
+    max-height: 30px;
+    max-width: 30px;
+  }
+
+  .nav__icon-container {
+    width: 30px;
+    height: 30px;
+  }
+}

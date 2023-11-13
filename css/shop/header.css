@@ -13,11 +13,22 @@
 
 @media (max-width: 1600px) {
   .container--header {
-    grid-template-columns: unset;
     grid-template-areas:
       "logo nav nav nav"
       "menu search search search"
     ;
     row-gap: 34px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container--header {
+    margin-bottom: 40px;
+  }
+
+  .logo {
+    padding-top: 0;
+    width: 165px;
   }
 }
