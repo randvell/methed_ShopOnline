@@ -1,18 +1,17 @@
-.header {
+.container--header {
   align-items: center;
-  grid-template-columns: repeat(12, 1fr);
-  justify-content: space-between;
+  grid-template-columns: 190px 1fr 4.3fr 1fr;
+  grid-template-areas: 'logo menu search nav';
   padding-top: 34px;
   margin-bottom: 90px;
 }
 
 .logo {
+  grid-area: logo;
   padding-top: 14px;
-  grid-row: 1 / 3;
-  max-width: 190px;
 }
 
-@media (max-width: 1560px) {
+@media (max-width: 1600px) {
   .container--header {
     grid-template-columns: unset;
     grid-template-areas:
@@ -20,9 +19,5 @@
       "menu search search search"
     ;
     row-gap: 34px;
-  }
-
-  .logo {
-    grid-area: logo;
   }
 }

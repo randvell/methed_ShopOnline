@@ -1,6 +1,5 @@
 .nav {
-  grid-column: 11 / 13;
-  grid-row: 1 / 2;
+  grid-area: nav;
   justify-self: end;
   display: grid;
 }
@@ -62,10 +61,4 @@
   font-size: 14px;
   line-height: normal;
   color: #3670C7;
-}
-
-@media (max-width: 1560px) {
-  .nav {
-    grid-area: nav;
-  }
 }
