@@ -44,6 +44,9 @@ const getTimeComponents = (time) => {
   };
 };
 
+const padWithZeros = (num, totalLength = 2) =>
+  String(num).padStart(totalLength, '0');
+
 export const processTimer = (timerElement) => {
   if (!timerElement) {
     return;
@@ -103,17 +106,17 @@ export const processTimer = (timerElement) => {
         'секунды',
         'секунд',
       ]);
-      secondsContainer.value.textContent = seconds;
+      secondsContainer.value.textContent = padWithZeros(seconds);
     }
 
     hoursContainer.unit.textContent = getUnit(hours, ['час', 'часа', 'часов']);
-    hoursContainer.value.textContent = hours;
+    hoursContainer.value.textContent = padWithZeros(hours);
 
     minutesContainer.unit.textContent = getUnit(minutes, [
       'минута',
       'минуты',
       'минут',
     ]);
-    minutesContainer.value.textContent = minutes;
+    minutesContainer.value.textContent = padWithZeros(minutes);
   }, 1000);
 };
