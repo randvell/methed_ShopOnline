@@ -5,8 +5,13 @@
 .container--banner {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(4, 120px);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url(<path-to-image>), lightgray 0px -437.122px / 109.661% 286.301% no-repeat;
-  background-image: url("../../images/banner.jpg");
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    url(<path-to-image>), lightgray 0px -437.122px / 109.661% 286.301% no-repeat;
+  background-image: url('../../images/banner.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: none;
@@ -28,24 +33,25 @@
   grid-row: 2 / 3;
   grid-column: 2 / 8;
 
-  font-family: "Lato Bold";
+  font-family: 'Lato Bold';
   font-size: 70px;
   font-weight: 700;
   line-height: 130%;
 }
 
 .banner__timer {
+  display: grid;
+  grid-auto-flow: column;
   place-self: start center;
   grid-row: 4 / 5;
   grid-column: 1 / 13;
+  gap: 15px;
 }
 
 .timer__header {
   place-self: end center;
-  grid-row: 3 / 4;
-  grid-column: 1 / 13;
 
-  font-family: "Lato Bold";
+  font-family: 'Lato Bold';
   font-size: 16px;
   font-weight: 700;
   line-height: 130%;
@@ -58,14 +64,17 @@
 }
 
 .timer__item {
-  font-family: "Lato Bold";
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Lato Bold';
   font-size: 32px;
   font-weight: 700;
   line-height: 130%;
 }
 
 .timer__value {
-  font-family: "Lato Bold";
+  font-family: 'Lato Bold';
   font-size: 60px;
   font-weight: 700;
   line-height: 130%;
@@ -179,7 +188,7 @@
       font-size: 12px;
       line-height: 130%;
     }
-  
+
     .timer__value {
       font-size: 20px;
       line-height: 130%;
