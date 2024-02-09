@@ -15,7 +15,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  font-family: "Lato Regular", sans-serif;
+  font-family: 'Lato Regular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -90,7 +90,10 @@ iframe {
   max-width: 1770px;
   margin: 0 auto;
 }
-  
+
+.hidden {
+  display: none !important;
+}
 
 @media (max-width: 1600px) {
   .section {

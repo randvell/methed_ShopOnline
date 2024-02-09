@@ -41,11 +41,9 @@
 
 .banner__timer {
   display: grid;
-  grid-auto-flow: column;
   place-self: start center;
   grid-row: 4 / 5;
   grid-column: 1 / 13;
-  gap: 15px;
 }
 
 .timer__header {

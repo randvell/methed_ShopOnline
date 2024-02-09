@@ -59,6 +59,7 @@ export const processTimer = (timerElement) => {
 
   const header = document.createElement('p');
   header.classList.add('timer__header');
+  header.textContent = 'До конца акции осталось';
 
   const timerItemsContainer = document.createElement('div');
   timerItemsContainer.classList.add('timer__items');
@@ -69,7 +70,7 @@ export const processTimer = (timerElement) => {
   const hoursContainer = createTimerItem('hours');
   const minutesContainer = createTimerItem('minutes');
   const secondsContainer = createTimerItem('seconds');
-  timerElement.append(
+  timerItemsContainer.append(
     daysContainer,
     hoursContainer,
     minutesContainer,
@@ -89,6 +90,7 @@ export const processTimer = (timerElement) => {
 
     if (timeRemaining === 0) {
       clearInterval(timer);
+      timerElement.classList.add('hidden');
     }
 
     if (days > 0) {
