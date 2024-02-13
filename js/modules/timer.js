@@ -12,35 +12,33 @@ const createTimerItem = (modificator) => {
   return container;
 };
 
-const getUnit = (n, labels) => {
-  return labels[
+const getUnit = (n, labels) =>
+  labels[
     n % 10 === 1 && n % 100 !== 11
       ? 0
       : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)
       ? 1
       : 2
   ];
-};
 
 const getTimeComponents = (time) => {
-  var totalSeconds = time / 1000;
+  let totalSeconds = time / 1000;
+  const days = Math.floor(totalSeconds / (60 * 60 * 24));
 
-  var days = Math.floor(totalSeconds / (60 * 60 * 24));
   totalSeconds %= 60 * 60 * 24;
+  const hours = Math.floor(totalSeconds / (60 * 60));
 
-  var hours = Math.floor(totalSeconds / (60 * 60));
   totalSeconds %= 60 * 60;
+  const minutes = Math.floor(totalSeconds / 60);
 
-  var minutes = Math.floor(totalSeconds / 60);
   totalSeconds %= 60;
-
-  var seconds = Math.floor(totalSeconds);
+  const seconds = Math.floor(totalSeconds);
 
   return {
-    days: days,
-    hours: hours,
-    minutes: minutes,
-    seconds: seconds,
+    days,
+    hours,
+    minutes,
+    seconds,
   };
 };
 
